@@ -304,6 +304,77 @@ section[data-testid="stSidebar"] .stRadio div[role="radiogroup"] label p { font-
   .px-market { min-height: 76px; }
   .px-score,.px-signal { min-height: 0; }
 }
+/* PlanX Design C v2 — append before </style> in ui_v2.py (design-c only) */
+/* Sidebar: keep the complete PlanX logo visible, including on narrow windows. */
+section[data-testid="stSidebar"] > div,
+section[data-testid="stSidebar"] [data-testid="stSidebarUserContent"] {
+  box-sizing: border-box;
+  min-width: 0;
+}
+section[data-testid="stSidebar"] .planx-brand {
+  box-sizing: border-box;
+  width: 100%;
+  max-width: 100%;
+  margin: 6px 0 18px !important;
+  padding: 12px 12px 16px !important;
+  overflow: visible;
+}
+section[data-testid="stSidebar"] .planx-brand-title {
+  font-size: clamp(25px, 2vw, 30px) !important;
+  line-height: 1.12 !important;
+  letter-spacing: -.02em;
+  overflow-wrap: normal !important;
+}
+section[data-testid="stSidebar"] .planx-brand-sub {
+  font-size: 10px !important;
+  letter-spacing: .10em;
+  white-space: normal;
+  overflow-wrap: anywhere;
+}
+section[data-testid="stSidebar"] .stRadio div[role="radiogroup"] label {
+  box-sizing: border-box;
+  max-width: 100%;
+}
+/* Top heading: prevent breadcrumb/label collisions. */
+.px-title-row { gap: 12px 20px !important; }
+.px-title-row > div { min-width: 0; flex-wrap: wrap; }
+.px-title-row span, .px-title-row b { min-width: 0 !important; white-space: nowrap; }
+/* Investment cards: more predictable line wrapping and breathing room. */
+.px-score, .px-signal { min-width: 0; min-height: 250px !important; }
+.px-signal { display: flex; flex-direction: column; }
+.px-signal h4 {
+  line-height: 1.5 !important;
+  overflow-wrap: break-word;
+  word-break: keep-all;
+  margin: 12px 0 8px !important;
+}
+.px-signal p {
+  line-height: 1.6 !important;
+  overflow-wrap: break-word;
+  word-break: keep-all;
+}
+.px-score-row { line-height: 1.45; }
+.px-market { min-width: 0; }
+.px-market strong { line-height: 1.2 !important; }
+/* Lower analysis cards: avoid clipping long labels. */
+.px-heatmap, .px-watch, .px-value, .px-brief {
+  min-width: 0;
+  height: auto !important;
+}
+.px-panel-title { height: auto !important; min-height: 40px; line-height: 1.45; }
+.px-brief li { line-height: 1.6 !important; }
+@media (max-width: 900px) {
+  .block-container { padding: 1rem !important; }
+  .px-title-row > div { overflow-x: auto; flex-wrap: nowrap; }
+  .px-score, .px-signal { min-height: 215px !important; }
+}
+@media (max-width: 640px) {
+  section[data-testid="stSidebar"] { min-width: 0 !important; }
+  section[data-testid="stSidebar"] .planx-brand { padding: 10px 8px 14px !important; }
+  .px-score, .px-signal { min-height: 0 !important; }
+  .px-title-row span, .px-title-row b { white-space: nowrap; }
+}
+
 </style>
 """,
         unsafe_allow_html=True,
