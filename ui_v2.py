@@ -264,6 +264,46 @@ section[data-testid="stSidebar"] .planx-brand-sub{font-size:10px!important;lette
 .px-education{margin-top:9px;background:#fff;border:1px solid #e7ded0;border-radius:10px;padding:10px 14px;display:flex;align-items:center;gap:20px;font-size:11px}.px-education b{margin-right:13px}.px-education span,.px-education small{color:#718096}.px-pens{display:flex;gap:8px;margin-left:auto}.px-pens i{width:17px;height:5px;border-radius:5px;transform:rotate(-42deg);background:#d83c3c}.px-pens i:nth-child(2){background:#3677d8}.px-pens i:nth-child(3){background:#16804b}.px-pens i:nth-child(4){background:#171717}.px-live-divider{display:flex;align-items:center;gap:12px;margin:28px 0 8px;color:#80612f;font-size:11px;font-weight:800;letter-spacing:.08em}.px-live-divider:before,.px-live-divider:after{content:"";height:1px;background:#d9cbb5;flex:1}
 @media(max-width:1100px){.px-score,.px-signal{height:230px}.px-topline small{display:none}.px-title-row span,.px-title-row b{min-width:auto;padding:7px 12px}.px-watch-row{grid-template-columns:1fr auto}.px-watch-row em{display:none}}
 @media(max-width:700px){.block-container{padding:.8rem!important}.px-topline{align-items:flex-start}.px-topline>div:first-child{display:block}.px-topline span{font-size:27px}.px-topline b{display:block;font-size:10px;margin-top:4px}.px-date{display:none}.px-title-row{display:block}.px-title-row>div{overflow-x:auto;margin-top:8px}.px-score,.px-signal{height:auto;min-height:190px}.px-section-head{display:block}.px-section-head>span{display:block;margin-top:7px}.px-education{flex-wrap:wrap}.px-pens{margin-left:0}}
+/* PlanX C — readability and responsive refinements */
+section[data-testid="stSidebar"] { min-width: 280px; }
+section[data-testid="stSidebar"] .planx-brand { margin: 4px 0 18px; padding: 8px 8px 14px; }
+section[data-testid="stSidebar"] .planx-brand-title { font-size: 30px!important; overflow-wrap: anywhere; }
+section[data-testid="stSidebar"] .stRadio div[role="radiogroup"] label { padding: 10px 12px!important; }
+section[data-testid="stSidebar"] .stRadio div[role="radiogroup"] label p { font-size: 14px!important; line-height: 1.35!important; white-space: normal; }
+.block-container { max-width: 1540px!important; padding: 1.15rem 1.45rem 3rem!important; }
+.px-topline { flex-wrap: wrap; gap: 10px; }
+.px-topline>div:first-child { flex-wrap: wrap; gap: 8px 14px; }
+.px-market { min-height: 90px; padding: 12px 14px 8px; }
+.px-market span { font-size: 12px; }
+.px-market strong { font-size: clamp(19px, 1.7vw, 25px); overflow-wrap: anywhere; }
+.px-title-row { flex-wrap: wrap; gap: 12px 22px; }
+.px-title-row>div { min-width: 0; flex-wrap: wrap; }
+.px-title-row span,.px-title-row b { min-width: 0; padding: 8px 14px; }
+.px-score,.px-signal { height: auto; min-height: 240px; }
+.px-score-title,.px-signal-head { font-size: 14px; }
+.px-score-row { font-size: 12px; gap: 8px; }
+.px-signal h4 { font-size: 15px!important; margin: 12px 0 8px!important; }
+.px-signal p { font-size: 12px!important; min-height: 0; }
+.px-section-head { flex-wrap: wrap; gap: 8px; }
+.px-section-head h3 { font-size: 19px!important; }
+.px-panel-title { height: auto; min-height: 40px; font-size: 13px; }
+.px-heatmap,.px-watch { height: auto; min-height: 295px; }
+.px-watch-row,.px-watch-row b,.px-heat,.px-heat b { font-size: 12px; }
+.px-heat span { font-size: 13px; }
+.px-value,.px-brief { height: auto; min-height: 150px; }
+.px-brief li { font-size: 12px!important; }
+.px-education { flex-wrap: wrap; font-size: 12px; }
+@media(max-width: 900px) {
+  .block-container { padding: 1rem!important; }
+  .px-title-row>div { overflow-x: auto; flex-wrap: nowrap; }
+  .px-score,.px-signal { min-height: 215px; }
+}
+@media(max-width: 640px) {
+  section[data-testid="stSidebar"] { min-width: 0; }
+  .px-topline span { font-size: 27px; }
+  .px-market { min-height: 76px; }
+  .px-score,.px-signal { min-height: 0; }
+}
 </style>
 """,
         unsafe_allow_html=True,
